@@ -4,22 +4,22 @@
 
 @font-face {
 	font-family: "Playfair Display Regular";
-	src: url("../../public/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("truetype");
+	src: url("/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: "Playfair Display Bold";
-	src: url("../../public/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format("truetype");
+	src: url("/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: "Playfair Display Italic";
-	src: url("../../public/fonts/Playfair_Display/PlayfairDisplay-Italic.ttf") format("truetype");
+	src: url("/fonts/Playfair_Display/PlayfairDisplay-Italic.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: "Montserrat Regular";
-	src: url("../../public/fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+	src: url("/public/fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
 }
 
 :root {
