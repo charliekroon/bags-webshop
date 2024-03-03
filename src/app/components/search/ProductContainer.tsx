@@ -1,19 +1,29 @@
-import Image from "next/image";
+import Image, {ImageLoader} from "next/image";
+import React from "react";
 
 type ProductContainerProps = {
-	name: string;
-	imgUrl: string;
+	title: string;
+	imageUrl: string;
 };
 
-export const ProductContainer: React.FC<ProductContainerProps> = ({name, imgUrl}) => {
-	const imagePath = `/images/products/${imgUrl}`;
+const imageLoader: ImageLoader = ({src}) => {
+	return `/images/products/${src}`;
+};
 
+export const ProductContainer: React.FC<ProductContainerProps> = ({title, imageUrl}) => {
 	return (
 		<div className="w-full text-center rounded">
-			<div className="border border-slate-300 rounded">
-				<Image src={imagePath} alt={name} fill />
+			<div className="border rounded border-slate-300">
+				<Image
+					loader={imageLoader}
+					src={imageUrl}
+					alt="product image"
+					layout="fill"
+				/>
 			</div>
-			<p>{name}</p>
+			<p>{title}</p>
 		</div>
 	);
 };
+
+export default ProductContainer;
