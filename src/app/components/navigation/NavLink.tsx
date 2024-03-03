@@ -13,8 +13,10 @@ export const NavLink: React.FC<NavLinkProps> = ({url, label, isActive}) => {
 
 	return (
 		<li className={clsx(defaultStyle, isActive && activeStyle)}>
-			<Link href={url} legacyBehavior>
-				<a className="flex text-gray-600 hover:bg-slate-200 cursor-pointer transition-colors duration-300 m-2 p-5 rounded-lg">{label}</a>
+			<Link href={url}>
+				<div className="flex text-gray-600 hover:bg-slate-200 cursor-pointer transition-colors duration-300 m-2 p-5 rounded-lg">
+					{label}
+				</div>
 			</Link>
 		</li>
 	);

@@ -10,7 +10,12 @@ interface ButtonProps {
 	className?: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({children, onClick, variant = "primary", className}) => {
+export const Button: React.FC<ButtonProps> = ({
+	children,
+	onClick,
+	variant = "primary",
+	className,
+}) => {
 	const defaultStyle = "h-10 px-5 rounded-lg";
 
 	const buttonStyle = {
@@ -20,7 +25,9 @@ export const Button: React.FC<ButtonProps> = ({children, onClick, variant = "pri
 	};
 
 	return (
-		<button onClick={onClick} className={clsx(defaultStyle, buttonStyle[variant], className)}>
+		<button
+			onClick={onClick}
+			className={clsx(defaultStyle, buttonStyle[variant], className)}>
 			{children}
 		</button>
 	);
