@@ -11,8 +11,10 @@ export const Header: React.FC = () => {
 			<nav className="flex justify-around bg-white/88 backdrop-blur-md shadow-md w-full fixed top-0 left-0 z-10">
 				<div className="flex h-100 items-center space-x-8 lg:flex">
 					<ul className="flex flex-row">
-						<NavLink url="/louisvuitton" label="Louis Vuitton" />
-						<NavLink url="/gucci" label="Gucci" />
+						<NavLink url="/new-arrivals" label="New Arrivals" />
+						<NavLink url="/designers" label="Designers" />
+						<NavLink url="/bags" label="Bags" />
+						<NavLink url="/sale" label="Sale" />
 					</ul>
 				</div>
 				<div className="flex items-center">LOGO</div>
