@@ -11,7 +11,7 @@ export const SearchBar: React.FC = () => {
 				placeholder="Search"
 				className="bg-slate-300 p2 rounded-md"
 				value={search}
-				onClick={e => setSearch(e.target.value)}
+				readOnly
 			/>
 			<button className="transparent border-2 border-black w-10 h-10 mx-4 flex items-center justify-center">
 				<Search />

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import LV from "../../../public/images/LV.jpg";
 import {Button} from "./elements/Button";
 export const Banner: React.FC = () => {

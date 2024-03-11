@@ -1,4 +1,4 @@
-import Image, {ImageLoader} from "next/image";
+import Image from "next/image";
 import React from "react";
 
 type ProductContainerProps = {
@@ -6,11 +6,14 @@ type ProductContainerProps = {
 	imageUrl: string;
 };
 
-const imageLoader: ImageLoader = ({src}) => {
+const imageLoader = ({src}) => {
 	return `/images/products/${src}`;
 };
 
 export const ProductContainer: React.FC<ProductContainerProps> = ({title, imageUrl}) => {
+	const width = 500;
+	const height = 300;
+
 	return (
 		<div className="w-full text-center rounded">
 			<div className="border rounded border-slate-300">
@@ -18,7 +21,9 @@ export const ProductContainer: React.FC<ProductContainerProps> = ({title, imageU
 					loader={imageLoader}
 					src={imageUrl}
 					alt="product image"
-					layout="fill"
+					width={width}
+					height={height}
+					unoptimized={true}
 				/>
 			</div>
 			<p>{title}</p>
