@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.{ts,tsx}' --write",
+    "prettier-watch": "onchange 'src/**/*.{ts,tsx}' -- prettier --write {{changed}}"
   },
   "dependencies": {
     "@types/node": "20.11.24",
@@ -24,6 +26,10 @@
     "typescript": "5.3.3"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.1.0"
+    "@svgr/webpack": "^8.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "onchange": "^7.1.0",
+    "prettier": "^3.2.5"
   }
 }

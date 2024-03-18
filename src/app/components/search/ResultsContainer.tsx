@@ -15,7 +15,7 @@ export const ResultsContainer: React.FC = () => {
 	return (
 		<div className="flex">
 			<div className="container mx-auto space-y-2 lg:space-y-0 lg:gap-4 lg:grid-cols-3">
-				{PRODUCTS.map((product: Product, index) => {
+				{PRODUCTS.map((product: Product) => {
 					return (
 						<ProductContainer
 							key={product.id}
